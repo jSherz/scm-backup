@@ -2,6 +2,7 @@
 
 from logging import getLogger
 from github import Github
+from os import environ
 from os.path import join, exists
 from subprocess import call
 
@@ -11,7 +12,7 @@ log = getLogger('backup.github')
 
 log.info('[GitHub backup]')
 
-g = Github("", "")
+g = Github(environ['GITHUB_ACCESS_TOKEN'])
 
 for repo in g.get_user().get_repos():
     repo_name = repo.get_name()

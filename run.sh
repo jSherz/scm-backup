@@ -14,7 +14,7 @@ pip install -r requirements.txt
 
 echo "Performing GitHub backup..."
 
-python github.py
+python backup-github.py
 
 # echo "Performing BitBucket backup..."
 
