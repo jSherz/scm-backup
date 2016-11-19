@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if [[ ! -f "config.env" ]]
 then
@@ -6,7 +6,8 @@ then
   exit 1
 fi
 
-$VIRTUALENV_SOURCE_COMMAND
+source config.env
+source $VIRTUALENV_ACTIVATE_SCRIPT
 
 echo "Installing required Python modules..."
 
