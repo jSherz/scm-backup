@@ -20,3 +20,7 @@ python backup-github.py
 # echo "Performing BitBucket backup..."
 
 # python bitbucket.py
+
+echo "Uploading to cloud storage..."
+
+duplicity github/ gs://$BUCKET/github/
