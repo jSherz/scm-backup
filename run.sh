@@ -17,10 +17,11 @@ echo "Performing GitHub backup..."
 
 python backup-github.py
 
-# echo "Performing BitBucket backup..."
+echo "Performing BitBucket backup..."
 
-# python bitbucket.py
+python bitbucket.py
 
 echo "Uploading to cloud storage..."
 
 duplicity github/ gs://$BUCKET/github/
+duplicity bitbucket/ gs://$BUCKET/bitbucket/
